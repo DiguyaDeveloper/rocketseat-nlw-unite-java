@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import rocketseat.ceccoff.com.passin.domain.attendee.Attendee;
 import rocketseat.ceccoff.com.passin.domain.event.Event;
+import rocketseat.ceccoff.com.passin.domain.event.exceptions.EventNotFoundException;
 import rocketseat.ceccoff.com.passin.dto.event.EventIdDTO;
 import rocketseat.ceccoff.com.passin.dto.event.EventRequestDTO;
 import rocketseat.ceccoff.com.passin.dto.event.EventResponseDTO;
@@ -21,7 +22,7 @@ public class EventService {
 
     public EventResponseDTO getEventDetail(String eventId) {
         Event event = this.eventRepository.findById(eventId).orElseThrow(
-                () -> new RuntimeException("Event not found with ID:" + eventId)
+                () -> new EventNotFoundException("Event not found with ID:" + eventId)
         );
 
         List<Attendee> attendeeList = this.attendeeRepository.findByEventId(eventId);
