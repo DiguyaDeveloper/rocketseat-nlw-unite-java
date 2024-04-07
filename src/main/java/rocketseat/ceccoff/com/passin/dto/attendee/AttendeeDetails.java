@@ -6,6 +6,7 @@ public record AttendeeDetails(
         String id,
         String name,
         String email,
-        LocalDateTime checkedInAt
+        LocalDateTime createdAt,
+        LocalDateTime checkInAt
 ) {
 }
