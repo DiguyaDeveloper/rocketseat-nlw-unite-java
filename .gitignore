@@ -4,6 +4,10 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+gradle/
+
+# Ignore items inside src/main/resources/database
+src/main/resources/database/*
 
 ### STS ###
 .apt_generated
