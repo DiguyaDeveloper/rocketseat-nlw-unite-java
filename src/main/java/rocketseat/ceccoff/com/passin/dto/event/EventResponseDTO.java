@@ -5,9 +5,10 @@ import rocketseat.ceccoff.com.passin.domain.event.Event;
 
 @Getter
 public class EventResponseDTO {
+
     EventDetailDTO event;
 
-    public EventResponseDTO(Event event, Integer numberOfAttendees) {
+    public EventResponseDTO(Event event, Integer numberOfAttendees){
         this.event = new EventDetailDTO(
                 event.getId(),
                 event.getTitle(),
@@ -18,3 +19,4 @@ public class EventResponseDTO {
         );
     }
 }
+

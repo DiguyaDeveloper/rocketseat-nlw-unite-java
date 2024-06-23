@@ -18,7 +18,6 @@ import java.time.LocalDateTime;
 public class Attendee {
 
     @Id
-    @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 

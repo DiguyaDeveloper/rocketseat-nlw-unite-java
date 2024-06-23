@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Entity
 @Table(name = "events")
 @Getter
@@ -28,6 +29,6 @@ public class Event {
     @Column(nullable = false, unique = true)
     private String slug;
 
-    @Column(nullable = false, name = "maximum_attendees")
+    @Column(nullable = false, name="maximum_attendees")
     private Integer maximumAttendees;
 }
